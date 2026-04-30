@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BarberShop Store — Productos de Barbería</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="nav-logo">
+    <span class="logo-icon">💈</span>
+    <span>Barber<b>Shop</b></span>
+  </a>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="nav-cart" id="cart-toggle" title="Ver carrito">
+      🛒
+      <span id="cart-count"></span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-pole"></div>
+    <span class="hero-scissors">✂️</span>
+    <span class="hero-badge">✂ Tienda Oficial</span>
+    <h1>El estilo<br>empieza aquí<span>.</span></h1>
+    <p>Productos profesionales de barbería para hombres que cuidan su imagen. Calidad de salón directo a tu puerta.</p>
+    <a href="#productos" class="btn-hero">Ver productos →</a>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <div class="categories-bar">
+    <span class="category-chip">💈 Pomadas & Ceras</span>
+    <span class="category-chip">🪒 Cuidado de Barba</span>
+    <span class="category-chip">🧴 Afeite</span>
+    <span class="category-chip">🪮 Herramientas</span>
+    <span class="category-chip">🌿 Capilar</span>
+  </div>
+
+  <!-- PRODUCTOS -->
+  <section class="products-section" id="productos">
+    <div class="section-header">
+      <h2 class="section-title">Nuestros Productos</h2>
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="search-input" placeholder="Buscar producto..." autocomplete="off" />
+      </div>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="todos">Todos</button>
+      <button class="filter-btn" data-filter="pomadas">Pomadas & Ceras</button>
+      <button class="filter-btn" data-filter="barba">Barba</button>
+      <button class="filter-btn" data-filter="afeite">Afeite</button>
+      <button class="filter-btn" data-filter="herramientas">Herramientas</button>
+      <button class="filter-btn" data-filter="capilar">Capilar</button>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+  </section>
+
+  <!-- BANNER -->
+  <div class="barber-banner" id="nosotros">
+    <h2>💈 Calidad de barbería profesional</h2>
+    <p>Selección exclusiva para el hombre moderno. Envío a todo México.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contacto">
+    <div class="footer-stripes">
+      <div class="stripe stripe-r"></div>
+      <div class="stripe stripe-w"></div>
+      <div class="stripe stripe-b"></div>
+      <div class="stripe stripe-r"></div>
+      <div class="stripe stripe-w"></div>
+      <div class="stripe stripe-b"></div>
+    </div>
+    <div class="footer-logo">Barber<span>Shop</span> Store</div>
+    <p class="footer-tagline">✂ El estilo empieza con los productos correctos</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/rico_bu_/" target="_blank" rel="noopener" class="social-link">
+        <img src="img/instagram.png" alt="Instagram" class="social-icon" />
+        <span>@rico_bu_</span>
+      </a>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-copy">© 2026 BarberShop Store. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span class="modal-header-title">Detalle del producto</span>
+        <button id="modal-close">✕</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>🛒 Mi carrito</h3>
+      <button class="cart-drawer-close" id="cart-drawer-close">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body"></div>
+    <div class="cart-drawer-footer" id="cart-drawer-footer"></div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
